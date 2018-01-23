@@ -4,10 +4,10 @@ from pathlib import Path
 import pandas as pd
 import requests
 
-project_dir = Path(__file__).parents[2]
+project_dir = Path(__file__).parents[1]
 url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/00228/smsspamcollection.zip'
 data_path = project_dir / 'data' / 'smsspamcollection.zip'
-file_path = project_dir / 'data' / 'raw' / 'SMSSpamCollection'
+file_path = project_dir / 'data' / 'SMSSpamCollection'
 
 
 def download_data():
@@ -29,7 +29,7 @@ def unzip_data():
     zip_ref = zipfile.ZipFile(data_path, 'r')
     zip_ref.extractall(data_path.parent)
     zip_ref.close()
-    print('Unzipped file: ', str(data_path))
+    print('Unzipping Zip file: ', str(data_path))
 
 
 def make_dataframe():
