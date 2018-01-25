@@ -81,7 +81,7 @@ def plot_by_training_size(x: np.ndarray, y: np.array, metric: sklearn.metrics, c
     :param classifier_names:
     :return:
     """
-    plt.figure(figsize=(12, 9))
+    plt.figure(figsize=(12, 9), dpi=1200)
     ax = plt.subplot(111)
 
     ax.spines["top"].set_visible(False)
