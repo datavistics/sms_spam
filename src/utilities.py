@@ -48,14 +48,15 @@ def grid_search_analysis(pipeline, parameters, x_train, y_train, x_test, y_test)
 def metric_by_training_size(X, y, classifier_list, training_set, metric, as_percentage=True):
     """
     This is a refactoriation of code to repeat metrics for best fitted models by training set percentage size.
-    i.e.: Find accuracy rating for
+    i.e.: Find accuracy rating for multiple training-test splits for svm, random forests, and naive bayes and return an
+    np.ndarray
     :param X:
     :param y:
     :param classifier_list:
     :param training_set:
     :param metric:
     :param as_percentage:
-    :return:
+    :return: np.ndarray
     """
     metric_array = np.zeros((len(training_set), len(classifier_list)))
     for row_num, training_size in enumerate(training_set):
