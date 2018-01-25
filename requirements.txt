@@ -1,5 +1,7 @@
+matplotlib
 scikit-learn
 numpy
 pandas
 requests
+
 seaborn
