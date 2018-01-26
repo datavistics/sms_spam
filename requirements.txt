@@ -3,7 +3,7 @@ scikit-learn
 numpy
 pandas
 requests
-
+tensorflow
 seaborn
 keras
 jupyter
